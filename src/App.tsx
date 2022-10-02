@@ -1,26 +1,116 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+/** @jsxImportSource @emotion/react */
+import { css } from "@emotion/react";
+import Lottie from "react-lottie";
+import ReactHowler from "react-howler";
+import lotties from "./lotties";
+import { useState } from "react";
 
-function App() {
+const container = css`
+  width: 100%;
+  min-height: 100vh;
+  background-color: #5c5c5c;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  align-items: center;
+  justify-content: center;
+`;
+const title = css`
+  font-size: 46px;
+  font-weight: 700;
+  text-transform: uppercase;
+`;
+const wrapper = css`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  max-width: calc(160px * 4 - 10px);
+`;
+const itemBox = css`
+  width: 160px;
+  aspect-ratio: 1/1;
+  border: 6px solid white;
+  border-radius: 40px;
+  overflow: hidden;
+  background-color: transparent;
+  :hover {
+    background-color: #383838;
+  }
+  transition: background-color 0.3s;
+  cursor: pointer;
+`;
+
+type SoundType = (
+  | "bell"
+  | "bird"
+  | "bubble"
+  | "campfire"
+  | "machine"
+  | "pencil"
+  | "rain"
+  | "thunder"
+  | "wind"
+)[];
+
+const sounds: SoundType = [
+  "bell",
+  "bird",
+  "bubble",
+  "campfire",
+  "machine",
+  "pencil",
+  "rain",
+  "thunder",
+  "wind",
+];
+
+const initialState = {
+  bell: false,
+  bird: false,
+  bubble: false,
+  campfire: false,
+  machine: false,
+  pencil: false,
+  rain: false,
+  thunder: false,
+  wind: false,
+};
+
+const App = () => {
+  const [isPlay, setPlay] = useState(initialState);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div css={container}>
+      <h2 css={title}>Make your own sound</h2>
+      <div css={wrapper}>
+        {sounds.map((sound) => (
+          <button
+            css={itemBox}
+            key={sound}
+            onClick={() =>
+              setPlay((prev) => ({ ...prev, [sound]: !prev[sound] }))
+            }
+          >
+            <ReactHowler
+              src={`sounds/${sound}.mp3`}
+              playing={isPlay[sound]}
+              loop
+            />
+            <Lottie
+              options={{
+                loop: true,
+                autoplay: false,
+                animationData: lotties[sound],
+              }}
+              isStopped={!isPlay[sound]}
+            />
+          </button>
+        ))}
+      </div>
     </div>
   );
-}
+};
 
 export default App;
