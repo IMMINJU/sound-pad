@@ -16,9 +16,9 @@ const container = css`
   justify-content: center;
 `;
 const title = css`
-  font-size: 46px;
-  font-weight: 700;
+  font-size: 84px;
   text-transform: uppercase;
+  font-family: "Teko", sans-serif;
 `;
 const wrapper = css`
   display: flex;
@@ -97,6 +97,7 @@ const App = () => {
               src={`/sounds/${sound}.mp3`}
               playing={isPlay[sound]}
               loop
+              preload
             />
             <Lottie
               options={{
