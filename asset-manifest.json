@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/sound-pad/static/js/main.923ae55c.js",
+    "index.html": "/sound-pad/index.html",
+    "main.923ae55c.js.map": "/sound-pad/static/js/main.923ae55c.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.923ae55c.js"
+  ]
+}
