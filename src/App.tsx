@@ -83,7 +83,7 @@ const App = () => {
 
   return (
     <div css={container}>
-      <h2 css={title}>Make your own sound</h2>
+      <h2 css={title}>sound pad</h2>
       <div css={wrapper}>
         {sounds.map((sound) => (
           <button
@@ -94,7 +94,7 @@ const App = () => {
             }
           >
             <ReactHowler
-              src={`sounds/${sound}.mp3`}
+              src={`/sounds/${sound}.mp3`}
               playing={isPlay[sound]}
               loop
             />
