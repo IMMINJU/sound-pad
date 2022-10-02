@@ -1,10 +1,19 @@
 {
   "files": {
-    "main.js": "/sound-pad/static/js/main.2032e31b.js",
+    "main.js": "/sound-pad/static/js/main.ef9e42a9.js",
+    "static/media/wind.mp3": "/sound-pad/static/media/wind.a978b82741173d45f640.mp3",
+    "static/media/rain.mp3": "/sound-pad/static/media/rain.799405917a540d467804.mp3",
+    "static/media/thunder.mp3": "/sound-pad/static/media/thunder.7f982d1c7f3806efbd96.mp3",
+    "static/media/campfire.mp3": "/sound-pad/static/media/campfire.ff9c156e0ed890bb9370.mp3",
+    "static/media/bird.mp3": "/sound-pad/static/media/bird.52e4194e0ea9224255fe.mp3",
+    "static/media/bell.mp3": "/sound-pad/static/media/bell.f0336b15a5b612e13aec.mp3",
+    "static/media/machine.mp3": "/sound-pad/static/media/machine.056dc8aae2b2c140acbf.mp3",
+    "static/media/pencil.mp3": "/sound-pad/static/media/pencil.3de29c6e2fc08d1717d3.mp3",
+    "static/media/bubble.mp3": "/sound-pad/static/media/bubble.9507f7a16663f58f05b4.mp3",
     "index.html": "/sound-pad/index.html",
-    "main.2032e31b.js.map": "/sound-pad/static/js/main.2032e31b.js.map"
+    "main.ef9e42a9.js.map": "/sound-pad/static/js/main.ef9e42a9.js.map"
   },
   "entrypoints": [
-    "static/js/main.2032e31b.js"
+    "static/js/main.ef9e42a9.js"
   ]
 }
