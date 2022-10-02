@@ -94,10 +94,11 @@ const App = () => {
             }
           >
             <ReactHowler
-              src={`/sounds/${sound}.mp3`}
+              src={require(`../public/sounds/${sound}.mp3`)}
               playing={isPlay[sound]}
               loop
               preload
+              html5
             />
             <Lottie
               options={{
